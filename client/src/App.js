@@ -13,6 +13,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import CabinDirectory from './pages/CabinDirectory';
 import CabinDetail from './pages/CabinDetail';
+import CreateCabin from './pages/CreateCabin';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import AdminDashboard from './pages/AdminDashboard';
@@ -83,6 +84,12 @@ function App() {
           <Route path="/cabins/:id" element={
             <ProtectedRoute>
               <CabinDetail />
+            </ProtectedRoute>
+          } />
+          
+          <Route path="/cabins/create" element={
+            <ProtectedRoute>
+              <CreateCabin />
             </ProtectedRoute>
           } />
           
