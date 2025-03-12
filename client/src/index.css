@@ -1,0 +1,154 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+/* Cabin-themed background patterns */
+.cabin-bg {
+  background-image: url('/images/backgrounds/wood-texture.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.forest-bg {
+  background-image: url('/images/backgrounds/forest-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.lake-bg {
+  background-image: url('/images/backgrounds/lake-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Auth pages specific styles */
+.auth-container {
+  min-height: 100vh;
+  background-image: url('/images/backgrounds/cabin-lake.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.auth-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5D4037;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4E342E;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+}
+
+/* Cabin card styles */
+.cabin-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cabin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Notification styles */
+.notification-badge {
+  transition: all 0.3s ease;
+}
+
+.notification-item {
+  transition: background-color 0.3s ease;
+}
+
+.notification-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Custom button styles */
+.nature-button {
+  background: linear-gradient(45deg, #5D4037 30%, #795548 90%);
+  border-radius: 25px;
+  color: white;
+  padding: 8px 24px;
+  transition: all 0.3s ease;
+}
+
+.nature-button:hover {
+  background: linear-gradient(45deg, #4E342E 30%, #6D4C41 90%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
